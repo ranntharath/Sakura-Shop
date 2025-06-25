@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="sticky top-0 z-50">
+      <nav
+        class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52 bg-red-100"
+      >
+        <h1 class="text-primary-color text-2xl">Sakura</h1>
+        <ul class="md:flex justify-center gap-5 hidden navbar">
+          <li>
+            <a
+              class="text-description-color hover:text-primary-color nav-list home"
+              href="./index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-description-color hover:text-primary-color nav-list products"
+              href="./page/product-page.html"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-description-color hover:text-primary-color nav-list about"
+              href="#"
+              >About</a
+            >
+          </li>
+        </ul>
+        <!-- <div class="text-end">
+          <p><i class="fa-solid fa-cart-shopping"></i></p>
+        </div> -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-600 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden px-4 pb-4 hidden text-center bg-description-color navbar"
+      >
+        <a
+          href="./index.html"
+          class="block py-2 text-white hover:text-primary-color nav-list"
+          >Home</a
+        >
+        <a
+          href="./page/product-page.html"
+          class="block py-2 text-white hover:text-primary-color nav-list"
+          >Products</a
+        >
+        <a
+          href="#"
+          class="block py-2 text-white hover:text-primary-color nav-list"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="block py-2 text-white hover:text-primary-color nav-list"
+          >Contact</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="mx-4 md:mx-7 lg:mx-52 mt-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div
+            class="col-span-1 md:col-span-2 bg-[#8AC4FF] px-10 py-10 grid grid-cols-1 md:grid-cols-2 justify-center items-center rounded-md shadow-md shadow-slate-300"
+          >
+            <div class="flex flex-col gap-3 justify-start">
+              <h2 class="text-3xl text-white font-bold">Sakura</h2>
+              <p class="text-description-color text-xl line-clamp-3">
+                There are many variations of passage of Lorem Ipsum available,
+                but the
+              </p>
+              <button
+                class="py-2 px-5 w-32 rounded-full text-primary-color font-bold hover:opacity-80 bg-white shadow-md shadow-slate-500"
+              >
+                Buy Now
+              </button>
+            </div>
+            <div>
+              <img
+                class="w-full object-cover"
+                src="./image/shoes1.png"
+                alt="sakura"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 justify-between">
+            <div
+              class="grid grid-cols-2 justify-center items-center bg-[#FFADF5] p-9 rounded-md shadow-md shadow-slate-300"
+            >
+              <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
+              <img class="w-full object-cover" src="image/shoes2.png" alt="" />
+            </div>
+            <div
+              class="grid grid-cols-2 justify-center items-center bg-[#B8B8B8] p-9 rounded-md shadow-md shadow-slate-300"
+            >
+              <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
+              <img
+                class="w-full object-cover"
+                src="image/headphone.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-4 md:mx-7 lg:mx-52 mt-10">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-5 mt-4"
+        >
+          <div
+            class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
+          >
+            <img
+              class="w-14 object-cover"
+              src="image/shopping.png"
+              alt="shopping"
+            />
+
+            <div>
+              <p class="font-bold">Word</p>
+              <span class="text-description-color">Shopping</span>
+            </div>
+          </div>
+          <div
+            class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
+          >
+            <img
+              class="w-14 object-cover"
+              src="./image/customer.png"
+              alt="shopping"
+            />
+
+            <div>
+              <p class="font-bold line-clamp-1">99% Customer</p>
+              <span class="text-description-color">Feedbacks</span>
+            </div>
+          </div>
+          <div
+            class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
+          >
+            <img
+              class="w-14 object-cover"
+              src="image/payment.png"
+              alt="shopping"
+            />
+
+            <div>
+              <p class="font-bold">Payment</p>
+              <span class="text-description-color line-clamp-1"
+                >Secure System</span
+              >
+            </div>
+          </div>
+          <div
+            class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
+          >
+            <img
+              class="w-14 object-cover"
+              src="image/support.png"
+              alt="shopping"
+            />
+
+            <div>
+              <p class="font-bold line-clamp-1">24/7 Supports</p>
+              <span class="text-description-color line-clamp-1"
+                >Helpline - 121</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="arrive" class="mx-10 md:mx-7 lg:mx-52 mt-20">
+        <h2 class="text-2xl font-bold text-description-color">New Arrival</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-7 mt-10"
+          id="trening-cont"
+        ></div>
+      </section>
+      <section class="mx-4 md:mx-7 lg:mx-52 mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="flex flex-col gap-4 justify-between">
+            <div
+              class="grid grid-cols-2 justify-center items-center bg-[#FFADF5] p-9 rounded-md shadow-md shadow-slate-300"
+            >
+              <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
+              <img class="w-full object-cover" src="image/shoes2.png" alt="" />
+            </div>
+            <div
+              class="grid grid-cols-2 justify-center items-center bg-[#B8B8B8] p-9 rounded-md shadow-md shadow-slate-300"
+            >
+              <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
+              <img
+                class="w-full object-cover"
+                src="image/headphone.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="col-span-1 md:col-span-2 bg-[#f0f0f0] px-10 py-10 grid grid-cols-1 md:grid-cols-2 justify-center items-center rounded-md shadow-md shadow-slate-300"
+          >
+            <div class="flex flex-col gap-3 justify-start">
+              <h2 class="text-3xl text-black font-bold">Sakura</h2>
+              <p class="text-description-color text-xl line-clamp-3">
+                There are many variations of passage of Lorem Ipsum available,
+                but the
+              </p>
+              <button
+                class="py-2 px-5 w-32 rounded-full text-primary-color font-bold hover:opacity-80 bg-white shadow-md shadow-slate-300"
+              >
+                Buy Now
+              </button>
+            </div>
+            <div>
+              <img
+                class="w-full object-cover"
+                src="image/drone.png"
+                alt="sakura"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="arrive" class="mx-4 md:mx-7 lg:mx-52 mt-20">
+        <h2 class="text-2xl font-bold text-description-color">Trenning</h2>
+        <div
+          id="list-product"
+          class="product grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-7 mt-10"
+        >
+          product here
+        </div>
+      </section> -->
+      <div class="bg-pink-300 p-5 mt-20">
+        <h3 class="text-3xl font-bold text-white text-center">
+          Fight is the conversation, fist is the language
+        </h3>
+      </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-20 px-4 mt-20">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <!-- Left Section (Logo and CTA) -->
+        <div class="mb-6 md:mb-0">
+          <h2 class="text-xl font-bold mb-4">Start work today</h2>
+          <div class="flex items-center">
+            <input
+              type="email"
+              placeholder="Enter your email Address"
+              class="p-2 rounded-l-md bg-white text-gray-800 w-full md:w-64"
+            />
+            <button class="bg-black text-white p-2 rounded-r-md">Send</button>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-lg font-semibold">Sakura</h3>
+            <p class="text-sm">premium product with cute saler</p>
+          </div>
+        </div>
+
+        <!-- Middle Section (Navigation Links) -->
+        <div
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mb-6 md:mb-0"
+        >
+          <div>
+            <h4 class="font-semibold">About</h4>
+            <ul class="text-sm space-y-1 mt-3">
+              <li>Features</li>
+              <li>Pricing</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold">Gallery</h4>
+            <ul class="text-sm space-y-1 mt-3">
+              <li>Team</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Section (Image and Social Icons) -->
+        <div class="text-center md:text-right">
+          <img
+            src="./image/sakura.png"
+            alt="Team"
+            class="rounded-full bg-white w-32 h-32 mx-auto md:mx-0 mb-4"
+          />
+          <h4 class="font-semibold mb-2 text-center">Let's do it!</h4>
+          <div class="flex justify-center md:justify-end space-x-4">
+            <a href="https://www.facebook.com/share/1DeaH3Ekux/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script type="module">
+      import Products from "./js/Products.js";
+      const newArrive = document.getElementById("trening-cont");
+      const pro = [...Products()];
+      let newProducts = pro.filter((pro) => pro.tag == "new");
+      let renderNew = newProducts
+        .slice(0, 4)
+        .map((pro) => {
+          return `
+        <div
+              class=" p-2 rounded-md border grid gap-1 hover:scale-[1.009] duration-200 ease-in shadow-md shadow-slate-100 "
+            >
+              <div class="p-2 rounded-md bg-white w-full  h-64 detail">
+                <img class="object-cover w-full h-full overflow-hidden" src=${pro.image} alt=${pro.category} />
+              </div>
+              <div class="mt-1 ">
+                <p class="line-clamp-1  " 
+                style=" overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;"
+                  >${pro.title}
+                </p>
+                <small class="text-secondary-color font-bold">$ ${pro.price}</small>
+              </div>
+              <hr />
+              <div class="flex justify-between items-center mt-1">
+                <span><i class="fa-regular fa-heart "></i></span>
+                <button
+                  class="add-to-cart-btn px-3 rounded-full py-1 text-primary-color border border-primary-color hover:bg-primary-color hover:text-white duration-200 ease-in"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+        `;
+        })
+        .join("");
+      newArrive.innerHTML = renderNew;
+      document.querySelectorAll(".detail").forEach((e, index) => {
+        e.addEventListener("click", (v) => {
+          const id = newProducts[index].id;
+          console.log(id);
+          window.location.href = `./page/productDetail.html?id=${id}`;
+        });
+      });
+    </script>
+  </body>
+</html>
