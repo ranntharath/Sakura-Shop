@@ -665,20 +665,16 @@ video {
   margin-top: 5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .line-clamp-1 {
@@ -848,28 +844,16 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -908,14 +892,6 @@ video {
 
 .border-\[1\.5px\] {
   border-width: 1.5px;
-}
-
-.border-r {
-  border-right-width: 1px;
-}
-
-.border-r-2 {
-  border-right-width: 2px;
 }
 
 .border-primary-color {
@@ -983,8 +959,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-transparent {
-  background-color: transparent;
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -1007,10 +984,6 @@ video {
 
 .p-9 {
   padding: 2.25rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .px-10 {
@@ -1275,10 +1248,6 @@ video {
 
   .md\:flex-col {
     flex-direction: column;
-  }
-
-  .md\:flex-wrap {
-    flex-wrap: wrap;
   }
 
   .md\:items-start {
