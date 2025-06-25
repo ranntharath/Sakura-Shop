@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./src/output.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body >
+  <body>
     <header class="sticky top-0 z-50">
       <nav
         class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52 bg-red-100"
@@ -30,7 +30,7 @@
           <li>
             <a
               class="text-description-color hover:text-primary-color nav-list products"
-              href="./page/product-page.html"
+              href="./src/page/product-page.html"
               >Products</a
             >
           </li>
@@ -75,7 +75,7 @@
           >Home</a
         >
         <a
-          href="./page/product-page.html"
+          href="./src/page/product-page.html"
           class="block py-2 text-white hover:text-primary-color nav-list"
           >Products</a
         >
@@ -112,7 +112,7 @@
             <div>
               <img
                 class="w-full object-cover"
-                src="./image/shoes1.png"
+                src="./src/image/shoes1.png"
                 alt="sakura"
               />
             </div>
@@ -122,7 +122,11 @@
               class="grid grid-cols-2 justify-center items-center bg-[#FFADF5] p-9 rounded-md shadow-md shadow-slate-300"
             >
               <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
-              <img class="w-full object-cover" src="image/shoes2.png" alt="" />
+              <img
+                class="w-full object-cover"
+                src="./src/image/shoes2.png"
+                alt=""
+              />
             </div>
             <div
               class="grid grid-cols-2 justify-center items-center bg-[#B8B8B8] p-9 rounded-md shadow-md shadow-slate-300"
@@ -130,7 +134,7 @@
               <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
               <img
                 class="w-full object-cover"
-                src="image/headphone.png"
+                src="./src/image/headphone.png"
                 alt=""
               />
             </div>
@@ -147,7 +151,7 @@
           >
             <img
               class="w-14 object-cover"
-              src="image/shopping.png"
+              src="./src/image/shopping.png"
               alt="shopping"
             />
 
@@ -161,7 +165,7 @@
           >
             <img
               class="w-14 object-cover"
-              src="./image/customer.png"
+              src="../src/image/customer.png"
               alt="shopping"
             />
 
@@ -175,7 +179,7 @@
           >
             <img
               class="w-14 object-cover"
-              src="image/payment.png"
+              src="./src/image/payment.png"
               alt="shopping"
             />
 
@@ -191,7 +195,7 @@
           >
             <img
               class="w-14 object-cover"
-              src="image/support.png"
+              src="./src/image/support.png"
               alt="shopping"
             />
 
@@ -218,7 +222,11 @@
               class="grid grid-cols-2 justify-center items-center bg-[#FFADF5] p-9 rounded-md shadow-md shadow-slate-300"
             >
               <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
-              <img class="w-full object-cover" src="image/shoes2.png" alt="" />
+              <img
+                class="w-full object-cover"
+                src="./src/image/shoes2.png"
+                alt=""
+              />
             </div>
             <div
               class="grid grid-cols-2 justify-center items-center bg-[#B8B8B8] p-9 rounded-md shadow-md shadow-slate-300"
@@ -226,7 +234,7 @@
               <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
               <img
                 class="w-full object-cover"
-                src="image/headphone.png"
+                src="./src/image/headphone.png"
                 alt=""
               />
             </div>
@@ -249,7 +257,7 @@
             <div>
               <img
                 class="w-full object-cover"
-                src="image/drone.png"
+                src="./src/image/drone.png"
                 alt="sakura"
               />
             </div>
@@ -314,7 +322,7 @@
         <!-- Right Section (Image and Social Icons) -->
         <div class="text-center md:text-right">
           <img
-            src="./image/sakura.png"
+            src="./src/image/sakura.png"
             alt="Team"
             class="rounded-full bg-white w-32 h-32 mx-auto md:mx-0 mb-4"
           />
@@ -330,9 +338,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/navbar.js"></script>
+    <script src="../src/js/navbar.js"></script>
     <script type="module">
-      import Products from "./js/Products.js";
+      import Products from "./src/js/Products.js";
       const newArrive = document.getElementById("trening-cont");
       const pro = [...Products()];
       let newProducts = pro.filter((pro) => pro.tag == "new");
@@ -374,7 +382,7 @@
         e.addEventListener("click", (v) => {
           const id = newProducts[index].id;
           console.log(id);
-          window.location.href = `./page/productDetail.html?id=${id}`;
+          window.location.href = `./src/page/productDetail.html?id=${id}`;
         });
       });
     </script>
