@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body >
+  <body>
     <header class="sticky top-0 z-50">
       <nav
         class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52 bg-red-100"
@@ -338,6 +338,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/navbar.js"></script>
     <script type="module">
       import Products from "./js/Products.js";
@@ -351,7 +352,9 @@
         <div
               class=" p-2 rounded-md border grid gap-1 hover:scale-[1.009] duration-200 ease-in shadow-md shadow-slate-100 "
             >
-              <div class="p-2 rounded-md bg-white w-full  h-64 detail">
+              <div class="p-2 rounded-md bg-white w-full  h-64 relative detail">
+                    <p class="bg-[#668c4c] w-10 h-10 text-white flex justify-center items-center rounded-full absolute right-1 top-1">${pro.tag}</p>
+
                 <img class="object-cover w-full h-full overflow-hidden" src=${pro.image} alt=${pro.category} />
               </div>
               <div class="mt-1 ">

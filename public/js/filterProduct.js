@@ -35,13 +35,17 @@ function filterProducts(category) {
   if (foundProducts) {
     foundProducts.innerText = show.length + " Products Found";
   }
-
   let container = show
     .map((pro) => {
+        const tagNew = `<p class="bg-[#668c4c] w-10 h-10 text-white flex justify-center items-center rounded-full absolute right-1 top-1">${pro.tag}</p>`
+
       return `<div
               class="each-product p-2 rounded-md border grid gap-1 hover:scale-[1.009] duration-200 ease-in shadow-md shadow-slate-100 "
             >
-              <div class="p-2 rounded-md bg-white w-full  h-64 detail">
+              <div class="p-2 rounded-md bg-white w-full relative h-64 detail">
+              
+                ${pro.tag === "new" ? tagNew : ""}
+              
                 <img class="object-cover w-full h-full overflow-hidden" src=${pro.image} alt=${pro.category} />
               </div>
               <div class="mt-1 ">
