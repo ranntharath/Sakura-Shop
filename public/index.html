@@ -14,6 +14,10 @@
     />
   </head>
   <body>
+     <div
+      id="toast"
+      class="hidden m-auto fixed bottom-10  right-5 z-50 text-center   text-secondary-color text-sm px-4 py-2 rounded-full shadow "
+    ></div>
     <header class="sticky top-0 z-50 bg-red-100 shadow-md">
   <nav class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52">
     <h1 class="text-primary-color text-2xl font-semibold">Sakura</h1>
@@ -46,8 +50,9 @@
     <!-- Cart & Mobile Menu Toggle -->
     <div class="flex items-center gap-6">
       <!-- Cart Icon -->
+      <a href="./page/cart-page.html">
       <div class="relative">
-        <a href="./page/cart-page.html">
+        
         <div class="relative">
           <i class="fa-solid fa-cart-shopping text-gray-700 text-xl"></i>
         
@@ -57,7 +62,7 @@
               >0</span
             >
         
-        </div>
+        </div></div>
       </a>
 
       <!-- Mobile Menu Button -->
