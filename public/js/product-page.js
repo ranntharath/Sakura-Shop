@@ -1,3 +1,4 @@
+import AddToCart from "./AddToCart.js";
 import Products from "./Products.js";
 
 const all = document.getElementById("all");
@@ -72,8 +73,8 @@ function filterProducts(category) {
     .join("");
   listProduct.innerHTML = container;
 
-  const addCart = document.querySelectorAll(".detail");
-  addCart.forEach((e, index) => {
+  const detail = document.querySelectorAll(".detail");
+  detail.forEach((e, index) => {
     e.addEventListener("click", () => {
       const id = show[index].id;
       window.location.href = `productDetail.html?id=${id}`;
@@ -86,4 +87,7 @@ function filterProducts(category) {
       e.classList.toggle("text-red-500");
     });
   });
+  //add to cart 
+  AddToCart(show)
+
 }

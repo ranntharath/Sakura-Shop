@@ -14,73 +14,107 @@
     />
   </head>
   <body>
-    <header class="sticky top-0 z-50">
-      <nav
-        class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52 bg-red-100"
-      >
-        <h1 class="text-primary-color text-2xl">Sakura</h1>
-        <ul class="md:flex justify-center gap-5 hidden">
+    <div
+      id="toast"
+      class="hidden m-auto fixed bottom-10  right-5 z-50 text-center   text-secondary-color text-sm px-4 py-2 rounded-full shadow "
+    ></div>
+
+    <header class="sticky top-0 z-50 bg-red-100 shadow-md">
+      <nav class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52">
+        <h1 class="text-primary-color text-2xl font-semibold">Sakura</h1>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 text-description-color font-medium">
           <li>
             <a
-              class="text-description-color hover:text-primary-color nav-list home"
               href="../index.html"
+              class="nav-list home hover:text-primary-color transition-colors duration-200"
               >Home</a
             >
           </li>
           <li>
             <a
-              class="text-description-color hover:text-primary-color nav-list products"
               href="./product-page.html"
+              class="nav-list products hover:text-primary-color transition-colors duration-200"
               >Products</a
             >
           </li>
           <li>
-            <a class="text-description-color hover:text-primary-color nav-list about" href="#"
+            <a
+              href="#"
+              class="nav-list about hover:text-primary-color transition-colors duration-200"
               >About</a
             >
           </li>
         </ul>
-        <!-- <div class="text-end">
-          <p><i class="fa-solid fa-cart-shopping"></i></p>
-        </div> -->
-        <button
-          id="menu-toggle"
-          class="md:hidden text-gray-600 focus:outline-none"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+
+        <!-- Cart & Mobile Menu Toggle -->
+        <div class="flex items-center gap-6">
+          <!-- Cart Icon -->
+          <a href="./cart-page.html">
+            <div class="relative">
+              <i class="fa-solid fa-cart-shopping text-gray-700 text-xl"></i>
+
+              <span
+                id="cart"
+                class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold"
+                >0</span
+              >
+            </div>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-toggle"
+            class="md:hidden text-gray-700 focus:outline-none"
+            aria-label="Toggle menu"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </nav>
+
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="md:hidden px-4 pb-4 hidden text-center bg-description-color"
+        class="md:hidden text-center bg-description-color text-white hidden flex-col px-6 py-4 space-y-4"
       >
-        <a href="../index.html" class="block py-2 text-white hover:text-primary-color nav-list"
+        <a
+          href="../index.html"
+          class="block hover:text-primary-color nav-list font-semibold"
           >Home</a
         >
-        <a href="#" class="block py-2 text-white hover:text-primary-color nav-list"
+        <a
+          href="#"
+          class="block hover:text-primary-color nav-list font-semibold"
           >About</a
         >
-        <a href="./product-page.html" class="block py-2 text-white hover:text-primary-color nav-list"
-          >produts</a
+        <a
+          href="./product-page.html"
+          class="block hover:text-primary-color nav-list font-semibold"
+          >Products</a
         >
-        <a href="#" class="block py-2 text-white hover:text-primary-color nav-list"
+        <a
+          href="#"
+          class="block hover:text-primary-color nav-list font-semibold"
           >Contact</a
         >
       </div>
     </header>
+
     <main>
       <section class="bg-slate-200 py-4 mt-10">
         <h2 class="text-center text-3xl font-bold text-description-color">
@@ -92,10 +126,14 @@
           <p class="text-xl font-bold">filter</p>
           <p id="found-product" class="text-xl font-bold">103 Products Found</p>
         </div>
-        <hr class="mt-5 border-[1.5px]">
+        <hr class="mt-5 border-[1.5px]" />
         <!--  filter -->
-        <div class="grid  grid-cols-1 md:grid-cols-4 justify-center items-start gap-3 md:gap-7 mt-10  ">
-          <div class="flex flex-row md:flex-col  md:justify-start md:items-start  gap-3 col-span-1 md:border-r-2 h-full">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 justify-center items-start gap-3 md:gap-7 mt-10"
+        >
+          <div
+            class="flex flex-row md:flex-col md:justify-start md:items-start gap-3 col-span-1 md:border-r-2 h-full"
+          >
             <p id="all" class="text-description-color hover:text-primary-color">
               All
             </p>
@@ -125,11 +163,11 @@
             </p>
           </div>
           <div
-          id="list-product"
-          class="product grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-start items-start gap-7 h-[80vh] col-span-3 overflow-y-scroll scroll-smooth    "
-        > 
-          <!-- product here -->
-        </div>
+            id="list-product"
+            class="product grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-start items-start gap-7 h-[80vh] col-span-3 overflow-y-scroll scroll-smooth"
+          >
+            <!-- product here -->
+          </div>
         </div>
       </section>
     </main>
@@ -146,15 +184,11 @@
               placeholder="Enter your email Address"
               class="p-2 rounded-l-md bg-white text-gray-800 w-full md:w-64"
             />
-            <button class="bg-black text-white p-2 rounded-r-md">
-              Send
-            </button>
+            <button class="bg-black text-white p-2 rounded-r-md">Send</button>
           </div>
           <div class="mt-4">
             <h3 class="text-lg font-semibold">Sakura</h3>
-            <p class="text-sm">
-              premium product with cute saler
-            </p>
+            <p class="text-sm">premium product with cute saler</p>
           </div>
         </div>
 
@@ -178,15 +212,17 @@
         </div>
 
         <!-- Right Section (Image and Social Icons) -->
-        <div class="text-center md:text-right ">
+        <div class="text-center md:text-right">
           <img
             src="../image/sakura.png"
             alt="Team"
             class="rounded-full bg-white w-32 h-32 mx-auto md:mx-0 mb-4"
           />
           <h4 class="font-semibold mb-2 text-center">Let's do it!</h4>
-          <div class="flex justify-center  md:justify-end space-x-4">
-            <a href="https://www.facebook.com/share/1DeaH3Ekux/"><i class="fab fa-facebook-f"></i></a>
+          <div class="flex justify-center md:justify-end space-x-4">
+            <a href="https://www.facebook.com/share/1DeaH3Ekux/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -196,5 +232,5 @@
     </footer>
   </body>
   <script src="../js/navbar.js"></script>
-  <script type="module" src="../js/filterProduct.js"></script>
+  <script type="module" src="../js/product-page.js"></script>
 </html>

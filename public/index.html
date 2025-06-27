@@ -14,83 +14,100 @@
     />
   </head>
   <body>
-    <header class="sticky top-0 z-50">
-      <nav
-        class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52 bg-red-100"
-      >
-        <h1 class="text-primary-color text-2xl">Sakura</h1>
-        <ul class="md:flex justify-center gap-5 hidden navbar">
-          <li>
-            <a
-              class="text-description-color hover:text-primary-color nav-list home"
-              href="./index.html"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-description-color hover:text-primary-color nav-list products"
-              href="./page/product-page.html"
-              >Products</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-description-color hover:text-primary-color nav-list about"
-              href="#"
-              >About</a
-            >
-          </li>
-        </ul>
-        <!-- <div class="text-end">
-          <p><i class="fa-solid fa-cart-shopping"></i></p>
-        </div> -->
-        <button
-          id="menu-toggle"
-          class="md:hidden text-gray-600 focus:outline-none"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </nav>
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="md:hidden px-4 pb-4 hidden text-center bg-description-color navbar"
-      >
+    <header class="sticky top-0 z-50 bg-red-100 shadow-md">
+  <nav class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52">
+    <h1 class="text-primary-color text-2xl font-semibold">Sakura</h1>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 text-description-color font-medium">
+      <li>
         <a
           href="./index.html"
-          class="block py-2 text-white hover:text-primary-color nav-list"
+          class="nav-list home hover:text-primary-color transition-colors duration-200"
           >Home</a
         >
+      </li>
+      <li>
         <a
           href="./page/product-page.html"
-          class="block py-2 text-white hover:text-primary-color nav-list"
+          class="nav-list products hover:text-primary-color transition-colors duration-200"
           >Products</a
         >
+      </li>
+      <li>
         <a
           href="#"
-          class="block py-2 text-white hover:text-primary-color nav-list"
-          >Services</a
+          class="nav-list about hover:text-primary-color transition-colors duration-200"
+          >About</a
         >
-        <a
-          href="#"
-          class="block py-2 text-white hover:text-primary-color nav-list"
-          >Contact</a
+      </li>
+    </ul>
+
+    <!-- Cart & Mobile Menu Toggle -->
+    <div class="flex items-center gap-6">
+      <!-- Cart Icon -->
+      <div class="relative">
+        <a href="./page/cart-page.html">
+        <div class="relative">
+          <i class="fa-solid fa-cart-shopping text-gray-700 text-xl"></i>
+        
+            <span
+              id="cart"
+              class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold"
+              >0</span
+            >
+        
+        </div>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-gray-700 focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-      </div>
-    </header>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden text-center bg-description-color text-white hidden flex-col px-6 py-4 space-y-4"
+  >
+    <a
+      href="./index.html"
+      class="block hover:text-primary-color nav-list font-semibold"
+      >Home</a
+    >
+    <a href="#" class="block hover:text-primary-color nav-list font-semibold"
+      >About</a
+    >
+    <a
+      href="./page/product-page.html"
+      class="block hover:text-primary-color nav-list font-semibold"
+      >Products</a
+    >
+    <a href="#" class="block hover:text-primary-color nav-list font-semibold"
+      >Contact</a
+    >
+  </div>
+</header>
+
     <main>
       <section class="mx-4 md:mx-7 lg:mx-52 mt-5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -340,9 +357,13 @@
     </footer>
 
     <script src="./js/navbar.js"></script>
+    
     <script type="module">
       import Products from "./js/Products.js";
+      import AddToCart from "./js/AddToCart.js"
+
       const newArrive = document.getElementById("trening-cont");
+      
       const pro = [...Products()];
       let newProducts = pro.filter((pro) => pro.tag == "new");
       let renderNew = newProducts
@@ -381,6 +402,7 @@
         })
         .join("");
       newArrive.innerHTML = renderNew;
+      AddToCart(newProducts)
       document.querySelectorAll(".detail").forEach((e, index) => {
         e.addEventListener("click", (v) => {
           const id = newProducts[index].id;
@@ -388,6 +410,7 @@
           window.location.href = `./page/productDetail.html?id=${id}`;
         });
       });
+
     </script>
   </body>
 </html>
