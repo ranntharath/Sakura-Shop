@@ -12,111 +12,111 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-     <div
+    <div
       id="toast"
-      class="hidden m-auto fixed bottom-10  right-5 z-50 text-center   text-secondary-color text-sm px-4 py-2 rounded-full shadow "
+      class="hidden m-auto fixed bottom-10 right-5 z-50 text-center text-secondary-color text-sm px-4 py-2 rounded-full shadow"
     ></div>
     <header class="sticky top-0 z-50 bg-red-100 shadow-md">
-  <nav class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52">
-    <h1 class="text-primary-color text-2xl font-semibold">Sakura</h1>
+      <nav class="flex justify-between items-center py-4 px-4 md:px-7 lg:px-52">
+        <h1 class="text-primary-color text-2xl font-semibold">Sakura</h1>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-8 text-description-color font-medium">
-      <li>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 text-description-color font-medium">
+          <li>
+            <a
+              href="./index.html"
+              class="nav-list home hover:text-primary-color transition-colors duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./page/product-page.html"
+              class="nav-list products hover:text-primary-color transition-colors duration-200"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="./page/contact-page.html"
+              class="nav-list about hover:text-primary-color transition-colors duration-200"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Cart & Mobile Menu Toggle -->
+        <div class="flex items-center gap-6">
+          <!-- Cart Icon -->
+          <a href="./page/cart-page.html">
+            <div class="relative">
+              <div class="relative">
+                <i class="fa-solid fa-cart-shopping text-gray-700 text-xl"></i>
+
+                <span
+                  id="cart"
+                  class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold"
+                  >0</span
+                >
+              </div>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-toggle"
+            class="md:hidden text-gray-700 focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden text-center bg-description-color text-white hidden flex-col px-6 py-4 space-y-4"
+      >
         <a
           href="./index.html"
-          class="nav-list home hover:text-primary-color transition-colors duration-200"
+          class="block hover:text-primary-color nav-list font-semibold"
           >Home</a
         >
-      </li>
-      <li>
         <a
           href="./page/product-page.html"
-          class="nav-list products hover:text-primary-color transition-colors duration-200"
+          class="block hover:text-primary-color nav-list font-semibold"
           >Products</a
         >
-      </li>
-      <li>
         <a
-          href="#"
-          class="nav-list about hover:text-primary-color transition-colors duration-200"
+          href="./page/contact-page.html"
+          class="block hover:text-primary-color nav-list font-semibold"
           >About</a
         >
-      </li>
-    </ul>
-
-    <!-- Cart & Mobile Menu Toggle -->
-    <div class="flex items-center gap-6">
-      <!-- Cart Icon -->
-      <a href="./page/cart-page.html">
-      <div class="relative">
-        
-        <div class="relative">
-          <i class="fa-solid fa-cart-shopping text-gray-700 text-xl"></i>
-        
-            <span
-              id="cart"
-              class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold"
-              >0</span
-            >
-        
-        </div></div>
-      </a>
-
-      <!-- Mobile Menu Button -->
-      <button
-        id="menu-toggle"
-        class="md:hidden text-gray-700 focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div
-    id="mobile-menu"
-    class="md:hidden text-center bg-description-color text-white hidden flex-col px-6 py-4 space-y-4"
-  >
-    <a
-      href="./index.html"
-      class="block hover:text-primary-color nav-list font-semibold"
-      >Home</a
-    >
-    <a href="#" class="block hover:text-primary-color nav-list font-semibold"
-      >About</a
-    >
-    <a
-      href="./page/product-page.html"
-      class="block hover:text-primary-color nav-list font-semibold"
-      >Products</a
-    >
-    <a href="#" class="block hover:text-primary-color nav-list font-semibold"
-      >Contact</a
-    >
-  </div>
-</header>
+      </div>
+    </header>
 
     <main>
       <section class="mx-4 md:mx-7 lg:mx-52 mt-5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div
+            data-aos="fade-up"
             class="col-span-1 md:col-span-2 bg-[#8AC4FF] px-10 py-10 grid grid-cols-1 md:grid-cols-2 justify-center items-center rounded-md shadow-md shadow-slate-300"
           >
             <div class="flex flex-col gap-3 justify-start">
@@ -141,6 +141,7 @@
           </div>
           <div class="flex flex-col gap-4 justify-between">
             <div
+              data-aos="fade-up"
               class="grid grid-cols-2 justify-center items-center bg-[#FFADF5] p-9 rounded-md shadow-md shadow-slate-300"
             >
               <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
@@ -151,6 +152,7 @@
               />
             </div>
             <div
+              data-aos="fade-up"
               class="grid grid-cols-2 justify-center items-center bg-[#B8B8B8] p-9 rounded-md shadow-md shadow-slate-300"
             >
               <h3 class="text-white text-xl font-bold">Bofurin Shirt</h3>
@@ -169,6 +171,7 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-5 mt-4"
         >
           <div
+            data-aos="zoom-in"
             class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
           >
             <img
@@ -183,6 +186,7 @@
             </div>
           </div>
           <div
+            data-aos="zoom-in"
             class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
           >
             <img
@@ -197,6 +201,7 @@
             </div>
           </div>
           <div
+            data-aos="zoom-in"
             class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
           >
             <img
@@ -213,6 +218,7 @@
             </div>
           </div>
           <div
+            data-aos="zoom-in"
             class="p-2 grid grid-cols-2 gap-2 justify-center items-center justify-items-center shadow-sm shadow-slate-300 rounded-md border"
           >
             <img
@@ -239,7 +245,10 @@
       </section>
       <section class="mx-4 md:mx-7 lg:mx-52 mt-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="flex flex-col gap-4 justify-between">
+          <div
+            data-aos="fade-right"
+            class="flex flex-col gap-4 justify-between"
+          >
             <div
               class="grid grid-cols-2 justify-center items-center bg-[#FFADF5] p-9 rounded-md shadow-md shadow-slate-300"
             >
@@ -261,10 +270,10 @@
               />
             </div>
           </div>
-          <div
+          <div 
             class="col-span-1 md:col-span-2 bg-[#f0f0f0] px-10 py-10 grid grid-cols-1 md:grid-cols-2 justify-center items-center rounded-md shadow-md shadow-slate-300"
           >
-            <div class="flex flex-col gap-3 justify-start">
+            <div data-aos="fade-left" class="flex flex-col gap-3 justify-start">
               <h2 class="text-3xl text-black font-bold">Sakura</h2>
               <p class="text-description-color text-xl line-clamp-3">
                 There are many variations of passage of Lorem Ipsum available,
@@ -295,10 +304,14 @@
           product here
         </div>
       </section> -->
-      <div class="bg-pink-300 p-5 mt-20">
-        <h3 class="text-3xl font-bold text-white text-center">
-          Fight is the conversation, fist is the language
-        </h3>
+      <div class="bg-pink-300 h-32 mt-20 overflow-hidden relative">
+        <p
+          id="scrolling-text"
+          class="text-3xl font-bold text-white whitespace-nowrap absolute top-1/2"
+          style="left: 100%"
+        >
+          “Buy my products. Watch me get rich. I'll thank you later.”
+        </p>
       </div>
     </main>
     <footer class="bg-gray-800 text-white py-20 px-4 mt-20">
@@ -362,20 +375,20 @@
     </footer>
 
     <script src="./js/navbar.js"></script>
-    
+
     <script type="module">
       import Products from "./js/Products.js";
-      import AddToCart from "./js/AddToCart.js"
+      import AddToCart from "./js/AddToCart.js";
 
       const newArrive = document.getElementById("trening-cont");
-      
+
       const pro = [...Products()];
       let newProducts = pro.filter((pro) => pro.tag == "new");
       let renderNew = newProducts
         .slice(0, 4)
         .map((pro) => {
           return `
-        <div
+        <div data-aos="fade-up"
               class=" p-2 rounded-md border grid gap-1 hover:scale-[1.009] duration-200 ease-in shadow-md shadow-slate-100 "
             >
               <div class="p-2 rounded-md bg-white w-full  h-64 relative detail">
@@ -407,7 +420,7 @@
         })
         .join("");
       newArrive.innerHTML = renderNew;
-      AddToCart(newProducts)
+      AddToCart(newProducts);
       document.querySelectorAll(".detail").forEach((e, index) => {
         e.addEventListener("click", (v) => {
           const id = newProducts[index].id;
@@ -416,6 +429,31 @@
         });
       });
 
+      //text animation
+      const text = document.getElementById("scrolling-text");
+      let position = window.innerWidth;
+      function animate() {
+        position -= 2; // speed: 2px per frame
+        if (position < -text.offsetWidth) {
+          position = window.innerWidth; // reset position
+        }
+        text.style.left = position + "px";
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      fetch("https://api.pexels.com/videos/search?query=cartoon", {
+        headers: {
+          Authorization: "5ovuDifnHNRKCpOIG064mY46sX3JKgNOiigepaRo7CANEg6v0B2gn2kx",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
     </script>
   </body>
 </html>

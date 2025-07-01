@@ -2,10 +2,7 @@ function AddToCart(show) {
   const addCart = document.querySelectorAll(".add-to-cart-btn");
   const cartLogo = document.getElementById("cart");
   const toast = document.getElementById("toast");
-  console.log(toast);
   let cart = JSON.parse(localStorage.getItem("cart") || "[]");
-
-  console.log(show);
   if (cartLogo) {
     cartLogo.innerText = cart.length;
   }

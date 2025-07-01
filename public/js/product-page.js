@@ -40,7 +40,7 @@ function filterProducts(category) {
     .map((pro) => {
         const tagNew = `<p class="bg-[#668c4c] w-10 h-10 text-white flex justify-center items-center rounded-full absolute right-1 top-1">${pro.tag}</p>`
 
-      return `<div
+      return `<div data-aos="fade-up"
               class="each-product p-2 rounded-md border grid gap-1 hover:scale-[1.009] duration-200 ease-in shadow-md shadow-slate-100 "
             >
               <div class="p-2 rounded-md bg-white w-full relative h-64 detail">
